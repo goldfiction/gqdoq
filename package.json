@@ -1,0 +1,13 @@
+{
+  "name": "gqdoq",
+  "version": "1.0.0",
+  "public":true,
+  "main":"./gqdoq.js",
+  "dependencies":{
+    "q":""
+  },
+  "version_log":{
+    "1.0.0":"minor revision and out to public!",
+    "0.0.1":"init"
+  }
+}
