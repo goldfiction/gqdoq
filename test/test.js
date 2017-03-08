@@ -2,7 +2,7 @@
  * Created by happy on 3/4/17.
  */
 var assert=require('assert');
-var doq=require('./../gqdoq.js');
+var doQ=require('./../gqdoq.js');
 
 it("should be able to run doq",function(done){
 
@@ -16,11 +16,11 @@ it("should be able to run doq",function(done){
         }
     }
 
-    // q_add is a q-tree compatible function for add
+    // q_add is a q-tree compatible function for add, doQ does precisely this
     function q_add(o){
         o=o||{};
         o.query=add;
-        return doq.doQ(o);
+        return doQ(o);
     }
 
     // data o needed by add

@@ -20,4 +20,4 @@ function doQ(o) {
     return deferred.promise;
 }
 
-exports.doQ = doQ;
+module.exports=doQ;
