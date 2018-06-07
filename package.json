@@ -1,6 +1,6 @@
 {
   "name": "gqdoq",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "public":true,
   "main":"./gqdoq.js",
   "dependencies":{
@@ -10,6 +10,7 @@
   "description":"doq is a simple script that converts o_tree functions to q_tree functions. It expects a single input o and yield a single output o. o.query must contain the o tree function to execute. o.error contains error and o.result contains the result.",
   "repository":"ssh://git@github.com/goldfiction/gqdoq.git",
   "version_log":{
+    "1.0.4":"added q method to object prototype",
     "1.0.1":"shorten doQ to module.exports",
     "1.0.0":"minor revision and out to public!",
     "0.0.1":"init"
