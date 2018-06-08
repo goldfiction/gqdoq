@@ -22,8 +22,8 @@ function doQ(o) {
 
 module.exports=doQ;
 
-Object.prototype.q=function(o){
-    o=o||{};
-    o.query=this;
-    return doQ(o);
-};
+//Object.prototype.q=function(o){
+//    o=o||{};
+//    o.query=this;
+//    return doQ(o);
+//};
