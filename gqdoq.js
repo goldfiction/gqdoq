@@ -18,12 +18,17 @@ function doQ(o) {
         deferred.resolve(o);
     }
     return deferred.promise;
+};
+
+exports.doQ=doQ;
+
+function extendQ(func){
+    func.q=function(o){
+        o=o||{};
+        o.query=func;
+        return doQ(o);
+    };
+    return func;
 }
 
-module.exports=doQ;
-
-//Object.prototype.q=function(o){
-//    o=o||{};
-//    o.query=this;
-//    return doQ(o);
-//};
+exports.extendQ=extendQ;

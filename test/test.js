@@ -20,7 +20,7 @@ it("should be able to run doq",function(done){
     function q_add(o){
         o=o||{};
         o.query=add;
-        return doQ(o);
+        return doQ.doQ(o);
     }
 
     // data o needed by add
@@ -38,26 +38,28 @@ it("should be able to run doq",function(done){
 
 });
 
-//it('should be able to run doq using q extension',function(done){
-//
-//    function add(o,cb){
-//        try {
-//            o.result = o.a + o.b;
-//            cb(null,o);
-//        }catch(e){
-//            cb(e);
-//        }
-//    }
-//
-//    var o={
-//        a:2,
-//        b:3
-//    };
-//
-//    add.q(o).then(function(o){   // now add.q is also q_add
-//        console.log(JSON.stringify(o));
-//        assert(o.result== o.a+ o.b);
-//        assert(!o.error);
-//    }).done(done);// notice you can done(done) in mocha
-//
-//})
+it('should be able to run doq using q extension',function(done){
+
+    function add(o,cb){
+        try {
+            o.result = o.a + o.b;
+            cb(null,o);
+        }catch(e){
+            cb(e);
+        }
+    }
+
+    var o={
+        a:2,
+        b:3
+    };
+
+    add=doQ.extendQ(add) // this allows doQ to be used as add.q(o)
+
+    add.q(o).then(function(o){   // now add.q is also q_add
+        console.log(JSON.stringify(o));
+        assert(o.result== o.a+ o.b);
+        assert(!o.error);
+    }).done(done);// notice you can done(done) in mocha
+
+})
