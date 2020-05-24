@@ -1,20 +1,23 @@
 {
   "name": "gqdoq",
-  "version": "1.1.0",
-  "public":true,
-  "main":"./gqdoq.js",
-  "dependencies":{
-    "q":""
+  "version": "1.1.1",
+  "public": true,
+  "main": "./gqdoq.js",
+  "dependencies": {
+    "q": "",
+    "deep-extend": "",
+    "async": ""
   },
-  "license":"MIT",
-  "description":"doq is a simple script that converts o_tree functions to q_tree functions. It expects a single input o and yield a single output o. o.query must contain the o tree function to execute. o.error contains error and o.result contains the result.",
-  "repository":"ssh://git@github.com/goldfiction/gqdoq.git",
-  "version_log":{
-    "1.1.0":"added extendQ",
-    "1.0.5":"removed q method as it is polluting enumerations",
-    "1.0.4":"added q method to object prototype",
-    "1.0.1":"shorten doQ to module.exports",
-    "1.0.0":"minor revision and out to public!",
-    "0.0.1":"init"
+  "license": "MIT",
+  "description": "doq is a simple script that converts o_tree functions to q_tree functions. It expects a single input o and yield a single output o. o.query must contain the o tree function to execute. o.error contains error and o.result contains the result.",
+  "repository": "ssh://git@github.com/goldfiction/gqdoq.git",
+  "version_log": {
+    "1.1.1": "added object.doQ, object.mapLimit, object.mapSeries, object.waterfall, global.async, global.Q",
+    "1.1.0": "added extendQ",
+    "1.0.5": "removed q method as it is polluting enumerations",
+    "1.0.4": "added q method to object prototype",
+    "1.0.1": "shorten doQ to module.exports",
+    "1.0.0": "minor revision and out to public!",
+    "0.0.1": "init"
   }
 }
